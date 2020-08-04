@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Likert Scale for Surveys.</title>
+      <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+      video{
+                margin-top:10%;             
+                width:640px;
+                height:360px;
+                margin-left:15%;
+      } 
+      body{
+          width: 950px;
+          height: 500px;
+          background: #D2D2D2;
+          margin:0 auto;
+      }
+      h1 {
+          font-weight: bold;
+          font-size: 3em;
+          margin-top: 1em;
+      }
+      .form-check-label {
+        font-weight: 200;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <h1>Scenario 4 </h1>
+
+  <div>
+    <video controls>
+      <source src="../static/images/robot_hesitate_to_place.mp4" type="video/mp4">
+    </video>
+  
+    <p> 
+        The robot takes the turn and is on its way to place the element. However, it is stopped by the participant.
+    </p>
+    <h3>How does the robot make you feel? (You can choose multiple choices)</h3>
+  </div>
+
+  <div class="row question1">
+       <div class="form-check form-check-inline">
+         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+         <label class="form-check-label" for="inlineCheckbox1">I feel offended by the robot.</label>
+       </div>
+       <div class="form-check form-check-inline">
+         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+         <label class="form-check-label" for="inlineCheckbox2">I feel sorry for the robot.</label>
+       </div>
+       <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">I feel interrupted by the robot.</label>
+      </div>
+       <div class="form-check form-check-inline">
+         <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+         <label class="form-check-label" for="inlineCheckbox4">I feel good about the robot.</label>
+       </div>
+       <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+        <label class="form-check-label" for="inlineCheckbox5">I don’t have any particular feelings towards the robot.</label>
+      </div>
+  </div>
+ 
+  <h3>What do you think of the robot (You can choose multiple choices)</h3>
+  <div class="row question2">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+      <label class="form-check-label" for="inlineCheckbox6">The robot is poor.</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+      <label class="form-check-label" for="inlineCheckbox7">The robot is impolite.</label>
+    </div>
+    <div class="form-check form-check-inline">
+     <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+     <label class="form-check-label" for="inlineCheckbox8">The robot is rational.</label>
+   </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
+      <label class="form-check-label" for="inlineCheckbox9">The robot is nice.</label>
+    </div>
+</div>
+
+
+    <div>
+    <button type="button" id="nextL" value="nextL" class="btn btn-primary btn-lg continue">
+        next
+    </button>
+    </div>
+
+  </form>
+    
+</body>
+
+</html>

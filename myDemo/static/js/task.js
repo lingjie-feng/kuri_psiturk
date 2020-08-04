@@ -26,6 +26,8 @@ var pages = [
 	"q1.html",
 	"q2.html",
 	"q3.html",
+	"q4.html",
+	"q5.html",
 	"postquestionnaire.html"
 ];
 
@@ -98,11 +100,57 @@ var Survey = function() {
 		$("#nextL").click(function () {
 			psiTurk.recordTrialData({'phase':"question 2", 'response':likertResponse});
 			psiTurk.showPage('q3.html');
-			fshortanswerpage();
+			q3page();
+		});
+	}
+
+	function q3page(){
+		$("#strongly_agree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#agree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#neutral").click(function() {
+			likertResponse = this.id;
+		})
+		$("#disagree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#strongly_disagree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#nextL").click(function () {
+			psiTurk.recordTrialData({'phase':"question 2", 'response':likertResponse});
+			psiTurk.showPage('q4.html');
+			q4page();
+		});
+	}
+
+	function q4page(){
+		$("#strongly_agree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#agree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#neutral").click(function() {
+			likertResponse = this.id;
+		})
+		$("#disagree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#strongly_disagree").click(function() {
+			likertResponse = this.id;
+		})
+		$("#nextL").click(function () {
+			psiTurk.recordTrialData({'phase':"question 2", 'response':likertResponse});
+			psiTurk.showPage('q5.html');
+			q5page();
 		});
 	}
 	
-	function fshortanswerpage(){
+	function q5page(){
 		$("#strongly_agree").click(function() {
 			likertResponse = this.id;
 		})
@@ -124,7 +172,6 @@ var Survey = function() {
 			currentview = new Questionnaire();});*/
 		$("#nextL").click(function () {
 				psiTurk.recordTrialData({'phase':"question 3", 'response':likertResponse});
-				fshortanswerpage();
 				currentview = new Questionnaire();
 		});
 

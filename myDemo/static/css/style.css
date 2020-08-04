@@ -86,10 +86,10 @@ h1 {
 .wrap {
   font:12px Arial, san-serif;
 }
-h1.likert-header {
+/*h1.likert-header {
   padding-left:4.25%;
   margin:20px 0 0;
-}
+}*/
 form .statement {
   display:block;
   font-size: 14px;

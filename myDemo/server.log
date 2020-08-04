@@ -3337,3 +3337,33 @@ Traceback (most recent call last):
 OSError: [Errno 41] Protocol wrong type for socket
 [2020-07-22 12:01:40 -0400] [98483] [CRITICAL] WORKER TIMEOUT (pid:98490)
 [2020-07-22 14:03:00 -0400] [99370] [CRITICAL] WORKER TIMEOUT (pid:99380)
+[2020-08-04 00:37:44 -0400] [27346] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/six.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 182, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/http/wsgi.py", line 353, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/util.py", line 304, in write
+    sock.sendall(data)
+OSError: [Errno 41] Protocol wrong type for socket
+[2020-08-04 00:46:11 -0400] [28145] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/six.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 182, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/http/wsgi.py", line 353, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/util.py", line 304, in write
+    sock.sendall(data)
+OSError: [Errno 41] Protocol wrong type for socket

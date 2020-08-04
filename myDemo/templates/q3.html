@@ -21,53 +21,203 @@
       h1 {
           font-weight: bold;
           font-size: 3em;
-          margin-top: 5em;
-          margin-bottom: 1em;
+          margin-top: 1em;
       }
-    #nextL{
-    background-color: white;
-    border: 1px #D2D2D2;
-    font-family: Georgia, serif; 
-    font-size: 1.5em;
-    margin:1%;
-    border-radius: 3px;
-  } 
+      .form-check-label {
+        font-weight: 200;
+    }
   </style>
   
 </head>
 
 <body>
+  <h1>Scenario 3 </h1>
+
+  <div>
     <video controls>
-        <source src="../static/images/human_placement_attention.mp4" type="video/mp4">
+      <source src="../static/images/robot_hesitate_to_place.mp4" type="video/mp4">
     </video>
+  
+    <p> 
+      The robot takes the turn and is on its way to place the element. However, it is stopped by the participant.
+    </p>
+    <h3>Which emotions do you think the robot is expressing? Choose the level of confidence that you think is the most appropriate (left: lowest confidence; right: highest confidence)</h3>
+  </div>
 
   <div class="wrap">
-  <h1 class="likert-header">Please rate the positivity.</h1>
+
   <form action="">
-    <label class="statement">green light</label>
-    <ul class='likert'>
+    <label class="statement">Anger</label>
+    <ul class='likert' id="group0">
       <li>
-        <input type="radio" name="likert" id="strongly_agree" value="strongly_agree">
-        <label>Strongly agree</label>
+        <input type="radio" name="group0" id="strongly_agree" value="strongly_agree">
+        <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="likert" id="agree" value="agree">
-        <label>Agree</label>
-      </li>
-      <li>
-        <input type="radio" name="likert" id="neutral" value="neutral">
-        <label>Neutral</label>
-      </li>
-      <li>
-        <input type="radio" name="likert" id="disagree" value="disagree">
+        <input type="radio" name="group0" id="agree" value="agree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="likert" id="strongly_disagree" value="strongly_disagree">
-        <label>Strongly disagree</label>
+        <input type="radio" name="group0" id="neutral" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group0" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group0" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
       </li>
     </ul>
     
+    <label class="statement">Disappointment</label>
+    <ul class='likert' id="group1">
+      <li>
+        <input type="radio" name="group1" id="strongly_agree" value="strongly_agree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group1" id="agree" value="agree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group1" id="neutral" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group1" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group1" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+
+    <label class="statement">Self-blame</label>
+    <ul class='likert' id="group2">
+      <li>
+        <input type="radio" name="group2" id="strongly_agree" value="strongly_agree"> 
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group2" id="agree" value="agree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group2" id="neutral" value="neutral" >
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group2" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group2" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+
+    <label class="statement">Lack of confidence</label>
+    <ul class='likert' id="group3">
+      <li>
+        <input type="radio" name="group3" id="strongly_agree" value="strongly_agree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group3" id="agree" value="agree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group3" id="neutral" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group3" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group3" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+
+    <label class="statement">Confusion</label>
+    <ul class='likert' id="group4">
+      <li>
+        <input type="radio" name="group4" id="strongly_agree" value="strongly_agree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group4" id="agree" value="agree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group4" id="neutral" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group4" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group4" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+
+    <label class="statement">Neutral</label>
+    <ul class='likert' id="group5">
+      <li>
+        <input type="radio" name="group5" id="strongly_agree" value="strongly_agree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group5" id="agree" value="agree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group5" id="neutral" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group5" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group5" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+
+    <label class="statement">Happiness</label>
+    <ul class='likert' id="group6">
+      <li>
+        <input type="radio" name="group6" id="strongly_agree" value="strongly_agree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group6" id="agree" value="agree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="group6" id="neutral" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="group6" id="disagree" value="disagree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="group6" id="strongly_disagree" value="strongly_disagree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+
+
+
+
     <div>
     <button type="button" id="nextL" value="nextL" class="btn btn-primary btn-lg continue">
         next
