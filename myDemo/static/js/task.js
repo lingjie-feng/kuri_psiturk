@@ -13,6 +13,14 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
+	"instructions/instruct-1.html",
+	"instructions/instruct-2.html",
+	"instructions/instruct-3.html",
+	"instructions/instruct-4.html",
+	"instructions/instruct-5.html",
+	"instructions/instruct-6.html",
+	"instructions/instruct-7.html",
+	"instructions/instruct-8.html",
 	"instructions/instruct-ready.html",
 	"welcome.html",
 	"q1.html",
@@ -24,6 +32,14 @@ var pages = [
 psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
+	"instructions/instruct-1.html",
+	"instructions/instruct-2.html",
+	"instructions/instruct-3.html",
+	"instructions/instruct-4.html",
+	"instructions/instruct-5.html",
+	"instructions/instruct-6.html",
+	"instructions/instruct-7.html",
+	"instructions/instruct-8.html",
 	"instructions/instruct-ready.html"
 ];
 
