@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+  The consent.html displays the text of your IRB-approved
+  consent form.  Even if you are not required to provide
+  a consent form, it is helpful to use this form to
+  describe what people can do if an error comes up, etc...
+
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>HARP Lab Experiment - Informed Consent Form</title>
+        <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+        <link rel="icon" href="static/favicon.ico" />
+        <script type="text/javascript">
+            function onexit() {
+              self.close(); // no harm, no foul here
+            }
+        </script>
+		<style>
+			@media print {
+				body * {
+					visibility: hidden;
+				}
+				.legal, .legal * {
+					visibility: visible;
+				}
+				.legal {
+					position: absolute;
+					left: 0;
+					top: 0;
+					overflow:visible;
+				}
+			}
+		</style>
+    </head>
+    <body>
+        <div id="container-consent">
+            <div id="consent">
+                <h1>We need your consent to proceed</h1>
+                <hr />
+                <div class="legal well">
+                    <p>
+                      <b>Introduction</b></br>
+                      This study is part of a research study conducted by Dr. Henny Admoni at Carnegie Mellon University and is funded by NSF.
+                    </br>
+                      The purpose of the research is to evaluate and compare different social behaviors for robots.
+                    </br></br>
+                      <b>Procedures</b></br>
+                      You will be asked to view images or videos of a robot and answer questions regarding them. This study may take up to 30 minutes.
+                    </br></br>
+                      <b>Participant Requirements</b></br>
+                      Participation in this study is limited to individuals age 18 and older.
+                    </br></br>
+                      <b>Risks</b></br>
+                      The risks and discomfort associated with participation in this study are no greater than those ordinarily encountered in daily life or during other online activities.
+                    </br></br>
+                      <b>Benefits</b></br>
+                      There may be no personal benefit from your participation in the study but the knowledge received may be of value to robotics research at Carnegie Mellon University.
+                    </br></br>
+                      <b>Compensation & Costs</b></br>
+                      You will be compensated at a competitive Amazon Mechanical Turk rate.
+                      There will be no cost to you if you participate in this study.
+                    </br></br>
+                      <b>Confidentiality</b></br>
+                      The data captured for the research does not include any personally identifiable information about you.  Your IP address will not be captured. Study sponsors may have access to research records.
+                      </br></br>
+                      <b>Right to Ask Questions & Contact Information</b></br>
+                      If you have any questions about this study, you should feel free to ask them by contacting the Principal Investigator now at the address below. If you have questions later, desire additional information, or wish to withdraw your participation please contact the Principal Investigator.</br></br>
+                      	&nbsp;&nbsp;&nbsp;&nbsp;Dr. Henny Admoni</br>
+                      	&nbsp;&nbsp;&nbsp;&nbsp;The Robotics Institute</br>
+                      	&nbsp;&nbsp;&nbsp;&nbsp;Carnegie Mellon University</br>
+                      	&nbsp;&nbsp;&nbsp;&nbsp;5000 Forbes Avenue</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Pittsburgh, PA, 15213</br>
+                      	&nbsp;&nbsp;&nbsp;&nbsp;Email: henny@cmu.edu</br>
+                      	&nbsp;&nbsp;&nbsp;&nbsp;(412) 268-7939</br></br>
+
+                      If you have questions pertaining to your rights as a research participant; or to report concerns to this study, you should contact the Office of Research integrity and Compliance at Carnegie Mellon University.  Email: irb-review@andrew.cmu.edu . Phone: 412-268-1901 or 412-268-5460.
+
+                    </p>
+
+                    <button type="button" class="btn btn-default btn-sm" onClick="window.print();">
+                    <span class="glyphicon glyphicon-print"></span> Print a copy of this
+                    </button>
+                </div>
+
+                <div class="row question">
+                     <div class="col-md-8">
+                        <h4>I am age 18 or older.</h4>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="answer">
+            					<input type="radio" name="answers[0]" id="answer-age-yes" value="yes" required>
+            					<label for="answer-age-yes" class="answer__item">
+            						Yes
+            					</label>
+            				</div>
+            				<div class="answer">
+            					<input type="radio" name="answers[0]" id="answer-age-no" value="no" required>
+            					<label for="answer-age-no" class="answer__item">
+            						No
+            					</label>
+            				</div>
+                  </div>
+                </div>
+
+                  <div class="row question">
+                       <div class="col-md-8">
+                          <h4>I have read and understand the information above.</h4>
+                      </div>
+
+                      <div class="col-md-4">
+                      <div class="answer">
+              					<input type="radio" name="answers[1]" id="answer-read-yes" value="yes" required>
+              					<label for="answer-read-yes" class="answer__item">
+              						Yes
+              					</label>
+              				</div>
+              				<div class="answer">
+              					<input type="radio" name="answers[1]" id="answer-read-no" value="no" required>
+              					<label for="answer-read-no" class="answer__item">
+              						No
+              					</label>
+              				</div>
+                    </div>
+                  </div>
+
+                <hr/>
+                <h4>I want to participate in this research and continue with the survey.</h4>
+                <br/>
+
+                <script type="text/javascript">
+                function continue_survey() {
+
+                  const rbs0 = document.querySelectorAll('input[name="answers[0]"]');
+                  let selectedQ0, val0;
+                  for (const rb of rbs0) {
+                      if (rb.checked) {
+                          val0 = rb.value;
+                          selectedQ0 = true;
+                          console.log("val0:" + val0);
+                          break;
+                      }
+                  }
+
+                  const rbs1 = document.querySelectorAll('input[name="answers[1]"]');
+                  let selectedQ1, val1;
+                  for (const rb of rbs1) {
+                      if (rb.checked) {
+                          val1 = rb.value;
+                          selectedQ1 = true;
+                          console.log("val1:" + val1);
+                          break;
+                      }
+                  }
+                  var alert_txt = document.getElementById('alert_txt');
+                  if (selectedQ0 && selectedQ1) {
+                    if (val0 == "no") {
+                      alert_txt.innerHTML = "You have to be 18 years or older in order to participate in the study. Please close the browser window to exit.";
+                    }
+                    else if (val1 == "no") {
+                      alert_txt.innerHTML = "You have to read and understand the consent information in order to participate in the study.";
+                    }
+                    else {
+                      window.location='exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}';
+                    }
+
+                  } else {
+                    alert_txt.innerHTML = "You have to answer all questions above to continue";
+                  }
+                }
+                </script>
+                <p id="alert_txt" style="color:red;"></p>
+                <center>
+                    <button type="button" class="btn btn-primary btn-lg" onClick="continue_survey();">
+                    <span class="glyphicon glyphicon-ok"></span> I agree
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger btn-lg" onClick="onexit();">
+                    <span class="glyphicon glyphicon-ban-circle"></span> No thanks, I do not want to do this HIT
+                    </button>
+                </center>
+
+            </div>
+        </div>
+    </body>
+</html>

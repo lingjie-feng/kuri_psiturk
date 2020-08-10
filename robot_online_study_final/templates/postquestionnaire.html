@@ -1,0 +1,114 @@
+
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Post Questionnaire</title>
+		<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+        <link rel="icon" href="static/favicon.ico" />
+		<style type="text/css">
+			/* these tyles need to be defined locally */
+      body{
+          width: 950px;
+          height: 500px;
+          background: white;
+          margin:0 auto;
+      }
+
+      .question{
+        font:14px Arial, san-serif;
+        font-weight: bold;
+      }
+		</style>
+	</head>
+	<body>
+
+    <h1>Task Complete</h1>
+    <hr/>
+
+    <div class="instructions well">
+        <form id="postquiz" action="debrief" method="post">
+            <!-- beginning of a question -->
+
+            <div>
+                <p class="row question">If you have other comments, please leave it here.</p>
+                <textarea id="comment" rows="5" cols="60"></textarea>
+            </div>
+            <hr/>
+            <div class="row question">
+                <div class="col-md-8">
+                    On a scale of 1-10 (where 10 is the most experienced), please rate your experience with robots:
+                </div>
+                <div class="col-md-4">
+                    <select id="robot_experience" name="robot_experience">
+                        <option value="10">10 - Very experienced</option>
+                        <option value="9">9</option>
+                        <option value="8">8</option>
+                        <option value="7">7</option>
+                        <option value="6">6</option>
+                        <option value="5" SELECTED>5 - Moderately</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0 - No experience</option>
+                    </select>
+                </div>
+            </div>
+            <!-- end of a question -->
+
+            <div class="row question">
+                 <div class="col-md-8">
+                    How would you describe your gender?
+                </div>
+
+                <div class="col-md-8">
+                  <div class="answer">
+                    <input type="radio" name="answers[1]" id="answer-read-yes" value="male" required>
+                    <label for="answer-read-yes" class="answer__item">
+                      Male
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <input type="radio" name="answers[1]" id="answer-read-no" value="female" required>
+                    <label for="answer-read-no" class="answer__item">
+                      Female
+                    </label>
+                  </div>
+
+                  <div class="answer">
+                    <input type="radio" name="answers[1]" id="answer-read-yes" value="self-describe" required>
+                    <label for="answer-read-yes" class="answer__item">
+                      Prefer to self-describe
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <input type="radio" name="answers[1]" id="answer-read-no" value="not-say" required>
+                    <label for="answer-read-no" class="answer__item">
+                      Prefer not to say
+                    </label>
+                  </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <hr/>
+    <p><b>You are finished!</b></p>
+    <hr/>
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-7">
+            </div>
+            <div class="col-xs-3">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                    Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

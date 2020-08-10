@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Robot Behaivor Survey</title>
+      <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+      video{
+            margin-top:0;
+            width:640px;
+            height:360px;
+            margin-left:15%;
+      }
+
+      body{
+          width: 950px;
+          height: 500px;
+          background: white;
+          margin:0 auto;
+      }
+      h1 {
+          font-weight: bold;
+          font-size: 1.8em;
+          margin-top: 1em;
+          /* font:18px Arial, san-serif; */
+          text-align: center;
+      }
+      .form-check-label {
+        font-weight: 200;
+      }
+
+  </style>
+
+</head>
+
+<body>
+  <h1 id="anim_header"> Scenario 1 (condition 1 out of 3) </h1>
+
+  <div>
+    <p id="sounds_on_txt" style="margin-left:45%; font-weight: bold; color:#eb4034"> </p>
+    <video controls id="anim_video">
+      <source src="../static/images/social_behaviors/stopped_live_frown.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="question">
+    <p>Please watch the video and place the dot on the slidebars to where you think that best describes the robot behaviors.
+      <!-- The middle position in the bar is a neutral standpoint.</p> -->
+  </div>
+
+  <form action="">
+  <p id="debug_text"></p>
+
+  <table class="slider_warp">
+    <tr>
+      <th class="left_text">Negative</th>
+      <th><input type="range" min="1" max="100" value="50" class="slider" id="positivity_range"></th>
+      <th class="right_text">Positive</th>
+    </tr>
+    <tr>
+      <th class="left_text">Mild</th>
+      <th><input type="range" min="1" max="100" value="50" class="slider" id="intensity_range"></th>
+      <th class="right_text">Intense</th>
+    </tr>
+    <tr>
+      <th class="left_text">Machine-like</th>
+      <th><input type="range" min="1" max="100" value="50" class="slider" id="socialness_range"></th>
+      <th class="right_text">Human-like</th>
+    </tr>
+  </table>
+
+    <div>
+    <button type="button" id="nextL" value="nextL" class="btn btn-primary btn-lg continue">
+        next
+    </button>
+    </div>
+
+  </form>
+</body>
+</html>
