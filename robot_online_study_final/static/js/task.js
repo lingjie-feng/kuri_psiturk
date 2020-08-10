@@ -39,12 +39,38 @@ var instructionPages = [ // add as a list as many pages as you like
 var Survey = function() {
 
 	var folder_path = "../static/images/social_behaviors/"
-	var anims = ["stopped_no_2.mp4",
-								"turn_taking_bye_1.mp4",
-								"stopped_live_frown.mp4"];
-	// var anims = ["bye_1_sounds_on.mp4",
-	// 							"giggle_3_sounds_on.mp4",
-	// 							"head_up_white.mp4"];
+	var anims = ["double_blink.mp4",
+								"lookup_bluelight.mp4",
+								"white_blink.mp4",
+								"blue_blink.mp4",
+								"red_blink.mp4",
+								"green_blink.mp4",
+								"yellow_blink.mp4",
+								"head_up_white.mp4",
+								"head_up_yellow.mp4",
+								"neutral_eyes_open.mp4",
+								"proud_1_sounds_on.mp4",
+								"putdown_sounds_on.mp4",
+								"photo_shoot_1_docked.mp4",
+								"neutral_eyes_close.mp4",
+								"pickup_sounds_on.mp4",
+								"gotit_docked_sounds_on.mp4",
+								"tickle_sounds_on.mp4",
+								"bye_1_sounds_on.mp4",
+								"look_around_head_mid.mp4",
+								"huh2_sounds_on.mp4",
+								"giggle_3_sounds_on.mp4",
+								"thank_you_1_sounds_on.mp4",
+								"huh1_offline_docked_sounds_on.mp4",
+								"twitch_1_sounds_on.mp4",
+								"look_around_head_low.mp4",
+								"ponder_sad.mp4",
+								"live_frown.mp4",
+								"look_around_head_high.mp4",
+								"yes_sounds_on.mp4",
+								"no_2_sounds_on.mp4",
+								"lost_sounds_on.mp4"
+							];
 
 	var anim_idx = 0
 
