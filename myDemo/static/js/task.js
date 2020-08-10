@@ -57,54 +57,147 @@ var instructionPages = [ // add as a list as many pages as you like
 ********************/
 
 var Survey = function() {	
-	var likertResponse; 
+	var likertResponse0; 
+	var likertResponse1; 
+	var likertResponse2; 
+	var likertResponse3; 
+	var likertResponse4; 
+	var likertResponse5;
+	var likertResponse6;
+	function click_store(){
+		$("#strongly_agree_0").click(function() {
+			likertResponse0 = this.value;
+		})
+		$("#agree_0").click(function() {
+			likertResponse0 = this.value;
+		})
+		$("#neutral_0").click(function() {
+			likertResponse0 = this.value;
+		})
+		$("#disagree_0").click(function() {
+			likertResponse0 = this.value;
+		})
+		$("#strongly_disagree_0").click(function() {
+			likertResponse0 = this.value;
+		})
+
+		$("#strongly_agree_1").click(function() {
+			likertResponse1 = this.value;
+		})
+		$("#agree_1").click(function() {
+			likertResponse1 = this.value;
+		})
+		$("#neutral_1").click(function() {
+			likertResponse1 = this.value;
+		})
+		$("#disagree_1").click(function() {
+			likertResponse1 = this.value;
+		})
+		$("#strongly_disagree_1").click(function() {
+			likertResponse1 = this.value;
+		})
+
+		$("#strongly_agree_2").click(function() {
+			likertResponse2 = this.value;
+		})
+		$("#agree_2").click(function() {
+			likertResponse2 = this.value;
+		})
+		$("#neutral_2").click(function() {
+			likertResponse2 = this.value;
+		})
+		$("#disagree_2").click(function() {
+			likertResponse2 = this.value;
+		})
+		$("#strongly_disagree_2").click(function() {
+			likertResponse2 = this.value;
+		})
+
+		$("#strongly_agree_3").click(function() {
+			likertResponse3 = this.value;
+		})
+		$("#agree_3").click(function() {
+			likertResponse3 = this.value;
+		})
+		$("#neutral_3").click(function() {
+			likertResponse3 = this.value;
+		})
+		$("#disagree_3").click(function() {
+			likertResponse3 = this.value;
+		})
+		$("#strongly_disagree_3").click(function() {
+			likertResponse3 = this.value;
+		})
+
+		$("#strongly_agree_4").click(function() {
+			likertResponse4 = this.value;
+		})
+		$("#agree_4").click(function() {
+			likertResponse4 = this.value;
+		})
+		$("#neutral_4").click(function() {
+			likertResponse4 = this.value;
+		})
+		$("#disagree_4").click(function() {
+			likertResponse4 = this.value;
+		})
+		$("#strongly_disagree_4").click(function() {
+			likertResponse4 = this.value;
+		})
+
+		$("#strongly_agree_5").click(function() {
+			likertResponse5 = this.value;
+		})
+		$("#agree_5").click(function() {
+			likertResponse5 = this.value;
+		})
+		$("#neutral_5").click(function() {
+			likertResponse5 = this.value;
+		})
+		$("#disagree_5").click(function() {
+			likertResponse5 = this.value;
+		})
+		$("#strongly_disagree_5").click(function() {
+			likertResponse5 = this.value;
+		})
+
+		$("#strongly_agree_6").click(function() {
+			likertResponse6 = this.value;
+		})
+		$("#agree_6").click(function() {
+			likertResponse6 = this.value;
+		})
+		$("#neutral_6").click(function() {
+			likertResponse6 = this.value;
+		})
+		$("#disagree_6").click(function() {
+			likertResponse6 = this.value;
+		})
+		$("#strongly_disagree_6").click(function() {
+			likertResponse6 = this.value;
+		})
+	}
+
 	function q1page() {
-		$("#strongly_agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#neutral").click(function() {
-			likertResponse = this.id;
-		})
-		$("#disagree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#strongly_disagree").click(function() {
-			likertResponse = this.id;
-		})
+		click_store();
 		$("#nextL").click(function () {
-			psiTurk.recordTrialData({'phase':"question 1", 'response':likertResponse});
+			psiTurk.recordTrialData({'phase':"scenario 1", 'response1':likertResponse0, 'response2':likertResponse1, 'response3':likertResponse2, 'response4':likertResponse3});
 			psiTurk.showPage('q2.html');
 			q2page();
 		});
 	}
 
 	function q2page(){
-		$("#strongly_agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#neutral").click(function() {
-			likertResponse = this.id;
-		})
-		$("#disagree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#strongly_disagree").click(function() {
-			likertResponse = this.id;
-		})
+		click_store();
 		$("#nextL").click(function () {
-			psiTurk.recordTrialData({'phase':"question 2", 'response':likertResponse});
+			psiTurk.recordTrialData({'phase':"scenario 2", 'response1':likertResponse0, 'response2':likertResponse1, 'response3':likertResponse2, 'response4':likertResponse3});
 			psiTurk.showPage('q3.html');
 			q3page();
 		});
 	}
 
 	function q3page(){
+		click_store();
 		$("#strongly_agree").click(function() {
 			likertResponse = this.id;
 		})
@@ -121,58 +214,37 @@ var Survey = function() {
 			likertResponse = this.id;
 		})
 		$("#nextL").click(function () {
-			psiTurk.recordTrialData({'phase':"question 2", 'response':likertResponse});
+			psiTurk.recordTrialData({'phase':"scenario 3", 'response1':likertResponse0, 'response2':likertResponse1, 'response3':likertResponse2, 'response4':likertResponse3, 'response5':likertResponse4, 'response6':likertResponse5, 'response7':likertResponse6});
 			psiTurk.showPage('q4.html');
 			q4page();
 		});
 	}
 
 	function q4page(){
-		$("#strongly_agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#neutral").click(function() {
-			likertResponse = this.id;
-		})
-		$("#disagree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#strongly_disagree").click(function() {
-			likertResponse = this.id;
-		})
+		var checkedbox = []
 		$("#nextL").click(function () {
-			psiTurk.recordTrialData({'phase':"question 2", 'response':likertResponse});
+			$("input:checked").each( function(){
+				checkedbox.push(this.value); 
+			});
+			psiTurk.recordTrialData({'phase':"scenario 4", 'response':checkedbox});
 			psiTurk.showPage('q5.html');
 			q5page();
 		});
 	}
 	
 	function q5page(){
-		$("#strongly_agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#agree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#neutral").click(function() {
-			likertResponse = this.id;
-		})
-		$("#disagree").click(function() {
-			likertResponse = this.id;
-		})
-		$("#strongly_disagree").click(function() {
-			likertResponse = this.id;
-		})
+		var checkedbox = []
 		/*$("#submit").click(function () {
 			var text = document.getElementById("sa").value;
 			psiTurk.recordUnstructuredData("text response", text);
 			currentview = new Questionnaire();});*/
 		$("#nextL").click(function () {
-				psiTurk.recordTrialData({'phase':"question 3", 'response':likertResponse});
-				currentview = new Questionnaire();
+			$("input:checked").each( function(){
+				checkedbox.push(this.value); 
+			});
+			psiTurk.recordTrialData({'phase':"scenario 5", 'response':checkedbox});
+			psiTurk.recordTrialData({'phase':'survey', 'status':'submit'});
+			currentview = new Questionnaire();
 		});
 
 	}
