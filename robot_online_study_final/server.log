@@ -7934,3 +7934,253 @@ jinja2.exceptions.TemplateNotFound: hello
 2020-08-10 00:05:48,860 hit_assign_worker_id_not_set_in_exp (1003) {'hitId': 'debugPZyEM', 'assignmentId': 'debugqOLFU', 'workerId': 'debugiwUqO'}
 [2020-08-10 00:06:19 -0400] [4816] [CRITICAL] WORKER TIMEOUT (pid:4874)
 2020-08-10 00:08:25,644 hit_assign_worker_id_not_set_in_exp (1003) {'hitId': 'debug1ACGg', 'assignmentId': 'debug7m30R', 'workerId': 'debugnBBxk'}
+2020-08-10 20:16:54,460 browser_type_not_allowed (1014) {'workerId': ['debug7Qdg0'], 'hitId': ['debugTWRMb'], 'mode': ['debug'], 'assignmentId': ['debugBVgRm']}
+2020-08-10 20:20:10,934 browser_type_not_allowed (1014) {'workerId': ['debugVjlCz'], 'hitId': ['debugJciuL'], 'mode': ['debug'], 'assignmentId': ['debugO3kC9']}
+2020-08-10 20:22:29,854 browser_type_not_allowed (1014) {'workerId': ['debug7Qdg0'], 'hitId': ['debugTWRMb'], 'mode': ['debug'], 'assignmentId': ['debugBVgRm']}
+2020-08-10 20:25:24,144 browser_type_not_allowed (1014) {'workerId': ['debugVjlCz'], 'hitId': ['debugJciuL'], 'mode': ['debug'], 'assignmentId': ['debugO3kC9']}
+2020-08-10 21:00:50,352 browser_type_not_allowed (1014) {'workerId': ['debugbx9Xx'], 'hitId': ['debugI0dhd'], 'mode': ['debug'], 'assignmentId': ['debug59B3E']}
+2020-08-10 21:14:10,427 browser_type_not_allowed (1014) {'workerId': ['debugS8Ekc'], 'hitId': ['debug2wCbR'], 'mode': ['debug'], 'assignmentId': ['debugQR6mh']}
+2020-08-10 21:14:30,061 browser_type_not_allowed (1014) {'workerId': ['debugbx9Xx'], 'hitId': ['debugI0dhd'], 'mode': ['debug'], 'assignmentId': ['debug59B3E']}
+2020-08-10 21:17:36,012 browser_type_not_allowed (1014) {'workerId': ['debugUvXvk'], 'hitId': ['debughQeED'], 'mode': ['debug'], 'assignmentId': ['debugHh7bX']}
+2020-08-10 21:29:32,562 browser_type_not_allowed (1014) {'workerId': ['debugUvXvk'], 'hitId': ['debughQeED'], 'mode': ['debug'], 'assignmentId': ['debugHh7bX']}
+2020-08-10 21:51:09,128 browser_type_not_allowed (1014) {'workerId': ['debugKL7i8'], 'hitId': ['debug6kLeS'], 'mode': ['debug'], 'assignmentId': ['debugnfYyt']}
+2020-08-10 22:04:46,413 browser_type_not_allowed (1014) {'workerId': ['debugKL7i8'], 'hitId': ['debug6kLeS'], 'mode': ['debug'], 'assignmentId': ['debugnfYyt']}
+2020-08-10 22:07:57,888 Exception on /apple-touch-icon.png [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: apple-touch-icon.png
+2020-08-10 22:07:57,892 Exception on /apple-touch-icon-precomposed.png [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: apple-touch-icon-precomposed.png
+2020-08-10 22:26:44,463 browser_type_not_allowed (1014) {'workerId': ['debugNXv48'], 'hitId': ['debug2rE8w'], 'mode': ['debug'], 'assignmentId': ['debugCzBUX']}
+2020-08-10 22:32:13,872 browser_type_not_allowed (1014) {'workerId': ['debug6Ne6o'], 'hitId': ['debugDw7Zd'], 'mode': ['debug'], 'assignmentId': ['debug875uC']}
+2020-08-10 23:12:35,384 Exception on /apple-touch-icon-120x120-precomposed.png [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: apple-touch-icon-120x120-precomposed.png
+2020-08-10 23:12:35,423 Exception on /apple-touch-icon-120x120.png [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: apple-touch-icon-120x120.png
+2020-08-10 23:12:35,473 Exception on /apple-touch-icon-precomposed.png [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: apple-touch-icon-precomposed.png
+2020-08-10 23:12:35,512 Exception on /apple-touch-icon.png [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: apple-touch-icon.png
+2020-08-11 00:31:46,241 browser_type_not_allowed (1014) {'workerId': ['debugWAC3Y'], 'hitId': ['debugvMqkh'], 'mode': ['debug'], 'assignmentId': ['debuglwtwa']}
+2020-08-11 00:44:11,195 browser_type_not_allowed (1014) {'hitId': ['debugvMqkh'], 'mode': ['debug'], 'workerId': ['debugWAC3Y'], 'assignmentId': ['debuglwtwa']}
+2020-08-11 01:13:22,343 browser_type_not_allowed (1014) {'hitId': ['debugButX4'], 'mode': ['debug'], 'workerId': ['debugRLV3f'], 'assignmentId': ['debugwXad5']}
+2020-08-11 01:14:57,057 browser_type_not_allowed (1014) {'hitId': ['debugWJyIn'], 'mode': ['debug'], 'workerId': ['debugkgz8M'], 'assignmentId': ['debug1cqpv']}
+2020-08-14 12:46:02,608 Exception on /80 [GET]
+Traceback (most recent call last):
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 2317, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1840, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1743, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1838, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/app.py", line 1824, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/psiturk/experiment.py", line 747, in regularpage
+    return render_template(pagename)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/lingjief/.local/lib/python3.5/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 80
+2020-08-15 13:08:15,971 hit_not_registered_with_ad_server (1018) {'hitId': ['debugK4NFSQ'], 'assignmentId': ['debugMGYETJ'], 'mode': ['sandbox'], 'workerId': ['debugX4FT2Y']}
+2020-08-15 13:15:29,546 hit_not_registered_with_ad_server (1018) {'mode': ['sandbox'], 'assignmentId': ['debug9NAJ62'], 'hitId': ['debugTTTK95'], 'workerId': ['debugEK0264']}
+2020-08-15 13:15:34,682 hit_not_registered_with_ad_server (1018) {'mode': ['sandbox'], 'assignmentId': ['debug9NAJ62'], 'hitId': ['debugTTTK95'], 'workerId': ['debugEK0264']}
+2020-08-15 13:15:41,188 hit_not_registered_with_ad_server (1018) {'mode': ['sandbox'], 'assignmentId': ['debug9NAJ62'], 'hitId': ['debugTTTK95'], 'workerId': ['debugEK0264']}
+2020-08-15 13:28:00,922 hit_not_registered_with_ad_server (1018) {'hitId': ['debugYCP70O'], 'workerId': ['debugN1BMY4'], 'assignmentId': ['debugDJL89Y'], 'mode': ['sandbox']}
+2020-08-15 13:31:02,018 hit_not_registered_with_ad_server (1018) {'hitId': ['debugKGE4RR'], 'mode': ['sandbox'], 'workerId': ['debugZGMLBY'], 'assignmentId': ['debugQK6W5Y']}
+2020-08-15 13:31:10,328 hit_not_registered_with_ad_server (1018) {'hitId': ['debugKGE4RR'], 'mode': ['sandbox'], 'workerId': ['debugZGMLBY'], 'assignmentId': ['debugQK6W5Y']}
+2020-08-15 13:43:15,225 hit_not_registered_with_ad_server (1018) {'workerId': ['debug3FNVJT'], 'assignmentId': ['debugNGLHPF'], 'hitId': ['debugMUBS68'], 'mode': ['sandbox']}
+2020-08-15 13:44:48,541 hit_not_registered_with_ad_server (1018) {'hitId': ['debugPLUGNO'], 'mode': ['sandbox'], 'workerId': ['debugEUY95V'], 'assignmentId': ['debug35RICM']}
+2020-08-15 13:45:00,248 hit_not_registered_with_ad_server (1018) {'hitId': ['debugPLUGNO'], 'mode': ['sandbox'], 'workerId': ['debugEUY95V'], 'assignmentId': ['debug35RICM']}
+2020-08-15 13:48:02,588 hit_not_registered_with_ad_server (1018) {'hitId': ['debugPLUGNO'], 'mode': ['sandbox'], 'workerId': ['debugEUY95V'], 'assignmentId': ['debug35RICM']}
+2020-08-15 16:18:15,921 already_started_exp (1008) {'hitId': ['32CAVSKPDIMDKQTL40Q953XUX2B1UH'], 'mode': ['sandbox'], 'workerId': ['A2T57TGT2L4TVG'], 'assignmentId': ['3KGTPGBS62IMVV8BD6VPY53FSADU2J']}
+2020-08-15 16:21:26,354 hit_not_registered_with_ad_server (1018) {'hitId': ['debugB39AF7'], 'mode': ['sandbox'], 'workerId': ['debugVGV3R0'], 'assignmentId': ['debugNVH3K5']}
+2020-08-15 16:22:26,073 hit_not_registered_with_ad_server (1018) {'hitId': ['debugB39AF7'], 'mode': ['sandbox'], 'workerId': ['debugVGV3R0'], 'assignmentId': ['debugNVH3K5']}
+2020-08-15 17:03:44,958 hit_not_registered_with_ad_server (1018) {'workerId': ['debugXQDNGX'], 'mode': ['sandbox'], 'assignmentId': ['debugCUWES4'], 'hitId': ['debugUR8XMW']}
+2020-08-16 12:15:57,730 hit_not_registered_with_ad_server (1018) {'workerId': ['debug9FKLEG'], 'mode': ['sandbox'], 'assignmentId': ['debugUVQGGY'], 'hitId': ['debugB8M29K']}

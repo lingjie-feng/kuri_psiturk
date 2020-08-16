@@ -1,22 +1,23 @@
 [HIT Configuration]
-title = Survey
+title = Kuri Study
 description = a survey
 amt_keywords = Perception, Psychology
 lifetime = 24
 us_only = true
 approve_requirement = 95
+#approve_requirement = 0
 number_hits_approved = 0
 require_master_workers = false
 contact_email_on_error = yaxinhu@andrew.cmu.edu
-ad_group = Default psiTurk Stroop Example
-psiturk_keywords = stroop
+ad_group = robot survey
+psiturk_keywords = survey
 organization_name = Carnegie Mellon University
 browser_exclude_rule = MSIE, mobile, tablet
-allow_repeats = false
+allow_repeats = true
 
 [Database Parameters]
-database_url = sqlite:///myDatabase.db
-table_name = myTable
+database_url = sqlite:///ptdatabase.db
+table_name = pilotTestTable
 
 [Server Parameters]
 host = 0.0.0.0
@@ -31,9 +32,9 @@ threads = auto
 secret_key = 'cknkuryfERTdsd38sdfo887nbg'
 #certfile = <path_to.crt>
 #keyfile = <path_to.key>
-#adserver_revproxy_host = www.location.of.your.revproxy.sans.protocol.com
-#adserver_revproxy_port = 80 # defaults to 80
-#server_timeout = 30
+adserver_revproxy_host = dashboard.personalrobotics.ri.cmu.edu
+adserver_revproxy_port = 80
+server_timeout = 30
 
 [Task Parameters]
 experiment_code_version = 1.0
@@ -49,5 +50,6 @@ persistent_history_file = .psiturk_history
 #
 #   https://<host>:<port>/ad
 
-use_psiturk_ad_server = false
-ad_location = https://128.2.204.147:8080/ad
+use_psiturk_ad_server = true
+ad_location = false
+
