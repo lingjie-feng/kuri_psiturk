@@ -53,21 +53,25 @@
 
   <table class="slider_warp">
     <tr>
-      <th class="left_text">Negative</th>
+      <th class="left_text" id="bar1_left_txt">Negative Emotion</th>
       <th><input type="range" min="1" max="100" value="50" class="slider" id="positivity_range"></th>
-      <th class="right_text">Positive</th>
+      <th class="right_text" id="bar1_right_txt">Positive Emotion</th>
     </tr>
     <tr>
-      <th class="left_text">Mild</th>
+      <th class="left_text" id="bar2_left_txt">Mild Emotion</th>
       <th><input type="range" min="1" max="100" value="50" class="slider" id="intensity_range"></th>
-      <th class="right_text">Intense</th>
+      <th class="right_text" id="bar2_right_txt">Intense Emotion</th>
     </tr>
     <tr>
-      <th class="left_text">Machine-like</th>
+      <th class="left_text" id="bar3_left_txt">Machine-like</th>
       <th><input type="range" min="1" max="100" value="50" class="slider" id="socialness_range"></th>
-      <th class="right_text">Human-like</th>
+      <th class="right_text" id="bar3_right_txt">Human-like</th>
     </tr>
   </table>
+</br>
+  <div>
+    <p id="warning_txt" style="margin-left:35%;font-weight:normal;color:#eb4034;">.</p>
+  </div>
 
     <div>
     <button type="button" id="nextL" value="nextL" class="btn btn-primary btn-lg continue">

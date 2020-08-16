@@ -45,16 +45,28 @@
                         <option value="8">8</option>
                         <option value="7">7</option>
                         <option value="6">6</option>
-                        <option value="5" SELECTED>5 - Moderately</option>
+                        <option value="5">5 - Moderately</option>
                         <option value="4">4</option>
                         <option value="3">3</option>
                         <option value="2">2</option>
                         <option value="1">1</option>
-                        <option value="0">0 - No experience</option>
+                        <option value="0" SELECTED>0 - No experience</option>
                     </select>
                 </div>
             </div>
             <!-- end of a question -->
+
+						<div class="row question">
+								 <!-- <div class="col-md-8">
+										What's your age?
+								</div> -->
+								<div class="col-md-8">
+								<label for="age_input"> What's your age? </label>
+								</div>
+								<div class="col-md-8">
+								<input type="number" min="1" max="100" value="30" id="age_input">
+								</div>
+						</div>
 
             <div class="row question">
                  <div class="col-md-8">
@@ -78,8 +90,10 @@
                   <div class="answer">
                     <input type="radio" name="answers[1]" id="answer-read-yes" value="self-describe" required>
                     <label for="answer-read-yes" class="answer__item">
-                      Prefer to self-describe
+                      Prefer to self-describe:
                     </label>
+										<input type="text" value="" id="gender_describe" class="answer__item">
+
                   </div>
                   <div class="answer">
                     <input type="radio" name="answers[1]" id="answer-read-no" value="not-say" required>
@@ -94,8 +108,12 @@
         </form>
     </div>
 
+		<div>
+			<p id="warning_txt" style="margin-left:20%; font-weight: bold; color:#eb4034"></p>
+		</div>
+
     <hr/>
-    <p><b>You are finished!</b></p>
+    <p><b>You are all finished!</b></p>
     <hr/>
     <div class="instructionsnav">
         <div class="row">

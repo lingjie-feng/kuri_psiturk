@@ -1,0 +1,74 @@
+
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Post Questionnaire</title>
+		<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+        <link rel="icon" href="static/favicon.ico" />
+		<style type="text/css">
+			/* these tyles need to be defined locally */
+      body{
+          width: 950px;
+          height: 500px;
+          background: white;
+          margin:0 auto;
+      }
+
+      .question{
+        font:14px Arial, san-serif;
+        font-weight: bold;
+      }
+
+		</style>
+	</head>
+	<body>
+
+
+    <hr/>
+
+    <div class="question" style="margin-left:20%">
+			<h4>What is the color that the robot displayed in the previous video?</h4>
+
+			<div>
+				<div class="answer">
+					<input type="radio" name="answers[1]" id="answer-read-yes" value="green" required>
+					<label for="answer-read-yes" class="answer__item">
+						Green
+					</label>
+				</div>
+				<div class="answer">
+					<input type="radio" name="answers[1]" id="answer-read-no" value="white" required>
+					<label for="answer-read-no" class="answer__item">
+						White
+					</label>
+				</div>
+
+				<div class="answer">
+					<input type="radio" name="answers[1]" id="answer-read-yes" value="blue" required>
+					<label for="answer-read-yes" class="answer__item">
+						Blue
+					</label>
+				</div>
+				<div class="answer">
+					<input type="radio" name="answers[1]" id="answer-read-no" value="red" required>
+					<label for="answer-read-no" class="answer__item">
+						Red
+					</label>
+				</div>
+      </div>
+
+
+    </div>
+
+		<div>
+		<div>
+			<p id="warning_txt" style="margin-left:20%; font-weight: bold; color:#eb4034"></p>
+		</div>
+
+		<button type="button" id="nextL" value="nextL" class="btn btn-primary btn-lg continue" style="margin-left:45%;">
+				next
+		</button>
+		</div>
+
+</body>
+</html>
