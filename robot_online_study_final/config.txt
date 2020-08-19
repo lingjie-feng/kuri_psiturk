@@ -13,7 +13,7 @@ ad_group = robot survey
 psiturk_keywords = survey
 organization_name = Carnegie Mellon University
 browser_exclude_rule = MSIE, mobile, tablet
-allow_repeats = fasle
+allow_repeats = false
 
 [Database Parameters]
 database_url = sqlite:///ptdatabase.db
