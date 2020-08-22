@@ -259,7 +259,7 @@ var Survey = function() {
 ****************/
 
 var Questionnaire = function() {
-
+	
 	var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
 
 	record_responses = function() {
@@ -289,9 +289,12 @@ var Questionnaire = function() {
 
 		var worker_id = document.getElementById('worker_id').value;
 
+		var code = document.getElementById('code').innerHTML; 
+		
 		psiTurk.recordTrialData({'phase':'postquestionnaire',
 														'status':'submit',
 														'worker_id':worker_id,
+														'survey_code': code,
 														'gender': gender,
 														'gender_describe': gender_describe,
 														'age': age_input,
@@ -332,6 +335,7 @@ var Questionnaire = function() {
 	// Load the questionnaire snippet
 	psiTurk.showPage('postquestionnaire.html');
 	psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
+
 
 	$("#next").click(function () {
 			var gender_rds, gender_selected;

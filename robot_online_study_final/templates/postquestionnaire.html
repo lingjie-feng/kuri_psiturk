@@ -120,7 +120,7 @@
 		</div>
 
     <hr/>
-    <p><b>You are all finished! Please write down the survey code: <h1>135</h1></b></p>
+    <p><b>You are all finished! Please write down the survey code: <h1 id="code">135</h1></b></p>
     <p><b>The survey code will be used for Amazon Mechanical Turk submission</b></p>
     <hr/>
     <div class="instructionsnav">
@@ -131,10 +131,30 @@
             </div>
             <div class="col-xs-3">
                 <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
-                    I have written down the survey code "135"<span class="glyphicon glyphicon-arrow-right"></span>
+                    I have written down the survey code <div id="code_button">135<div><span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>
         </div>
     </div>
+
+  <script>
+  get_survey_code = function() {
+		var today, date, time, dateTime, num; 
+		today = new Date();
+		date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+		dateTime = date+' '+time;
+		num = Math.floor(Math.random() * 150);
+		code = dateTime + num; 
+		console.log("code:" + code); 
+		code = code.replace(/-/g, "").replace(/:/g, "").replace(" ", ""); 
+		console.log("code_new:" + code); 
+		return code; 
+	}
+  var code = get_survey_code()
+  document.getElementById('code').innerHTML = code;
+  document.getElementById('code_button').innerHTML = code;
+  </script>
+
 </body>
 </html>

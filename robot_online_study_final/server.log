@@ -8306,3 +8306,48 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/gunicorn/util.py", line 304, in write
     sock.sendall(data)
 OSError: [Errno 41] Protocol wrong type for socket
+[2020-08-22 13:59:22 -0400] [5495] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/six.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 182, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/http/wsgi.py", line 353, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/util.py", line 304, in write
+    sock.sendall(data)
+OSError: [Errno 41] Protocol wrong type for socket
+[2020-08-22 13:59:24 -0400] [5494] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/six.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 182, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/http/wsgi.py", line 353, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/util.py", line 304, in write
+    sock.sendall(data)
+OSError: [Errno 41] Protocol wrong type for socket
+[2020-08-22 14:01:12 -0400] [5499] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/six.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 182, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/http/wsgi.py", line 353, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.7/site-packages/gunicorn/util.py", line 304, in write
+    sock.sendall(data)
+OSError: [Errno 41] Protocol wrong type for socket
