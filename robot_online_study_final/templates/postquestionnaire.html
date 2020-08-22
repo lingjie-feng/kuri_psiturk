@@ -33,7 +33,8 @@
               <p class="row question">Please enter your worker ID: 
                 <input type="text" value="" id="worker_id" required>
               </p>
-              <p>note: you can find your worker id at the <b>top right</b> corner of your Amazon Mechanical Turk worker page. </p>
+              <p>note: you can find your worker ID at the <b>top left</b> corner of your Amazon Mechanical Turk worker page. </p>
+              <img src="../static/images/worker_id_locate.png" type="image/png" style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 3%;width: 50%;">
             </div>
 
             <div>
@@ -43,21 +44,15 @@
             <hr/>
             <div class="row question">
                 <div class="col-md-8">
-                    On a scale of 1-10 (where 10 is the most experienced), please rate your experience with robots:
+                    On a scale of 0 - 4 (where 4 is the most experienced), please rate your professional experience with robots:
                 </div>
                 <div class="col-md-4">
                     <select id="robot_experience" name="robot_experience">
-                        <option value="10">10 - Very experienced</option>
-                        <option value="9">9</option>
-                        <option value="8">8</option>
-                        <option value="7">7</option>
-                        <option value="6">6</option>
-                        <option value="5">5 - Moderately</option>
-                        <option value="4">4</option>
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                        <option value="1">1</option>
-                        <option value="0" SELECTED>0 - No experience</option>
+                        <option value="4">4 - I work with robots very often.</option>
+                        <option value="3">3 - I work with robots often.</option>
+                        <option value="2">2 - I work with robots sometimes.</option>
+                        <option value="1">1 - I barely work with robots.</option>
+                        <option value="0" SELECTED>0 - I have never worked with robots before.</option>
                     </select>
                 </div>
             </div>
@@ -68,7 +63,7 @@
 										What's your age?
 								</div> -->
 								<div class="col-md-8">
-								<label for="age_input"> What's your age? </label>
+								<label for="age_input"> What is your age? </label>
 								</div>
 								<div class="col-md-8">
 								<input type="number" min="1" max="100" value="30" id="age_input">
@@ -120,16 +115,16 @@
 		</div>
 
     <hr/>
-    <p><b>You are all finished! Please write down the survey code: <h1 id="code">135</h1></b></p>
-    <p><b>The survey code will be used for Amazon Mechanical Turk submission</b></p>
+    <p><b>You are all finished! Please write down the survey code below. The survey code will be used for Amazon Mechanical Turk submission</b></p>
+    <h1 id="code" style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 3%;width: 50%;">135</h1>
     <hr/>
     <div class="instructionsnav">
         <div class="row">
             <div class="col-xs-2">
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-1">
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-2">
                 <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
                     I have written down the survey code <div id="code_button">135<div><span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
@@ -141,14 +136,13 @@
   get_survey_code = function() {
 		var today, date, time, dateTime, num; 
 		today = new Date();
-		date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-		time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-		dateTime = date+' '+time;
+    date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		time = today.getHours() + '-' + today.getMinutes() + '-' + today.getSeconds();
+		dateTime = date+time;
 		num = Math.floor(Math.random() * 150);
-		code = dateTime + num; 
+    code = dateTime + num; 
+		code = code.replace(/-/g, ""); 
 		console.log("code:" + code); 
-		code = code.replace(/-/g, "").replace(/:/g, "").replace(" ", ""); 
-		console.log("code_new:" + code); 
 		return code; 
 	}
   var code = get_survey_code()
