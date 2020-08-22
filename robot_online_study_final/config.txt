@@ -15,8 +15,8 @@ browser_exclude_rule = MSIE, mobile, tablet
 allow_repeats = false
 
 [Database Parameters]
-database_url = sqlite:///ptdatabase.db
-table_name = pilotTestTable
+database_url =  mysql://social_creation_study:dumb_kuri@172.19.179.10:3307/SocialCreationDb
+table_name = final_test_table
 
 [Server Parameters]
 host = 0.0.0.0
