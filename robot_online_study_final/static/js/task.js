@@ -182,36 +182,34 @@ var Survey = function() {
 		});
 
 		$("#nextL").click(function () {
-
 			if (bar1_select && bar2_select && bar3_select) {
 
 				psiTurk.recordTrialData({'phase':anims[anim_idx],
 																'positivity':positivity,
 																'intensity':intensity,
 																'socialness':socialness});
-
+			
 				anim_idx = anim_idx + 1;
-
+			
 				if (anim_idx == red_idx + 1) {
 					psiTurk.showPage("attention_check.html");
 					attention_check();
-
+			
 				} else if (anim_idx < anims.length) {
 					psiTurk.showPage('q1.html');
 					q1page();
-
+			
 				} else {
 					psiTurk.recordTrialData({'phase':'survey', 'status':'submit'});
 					currentview = new Questionnaire();
 				}
-
+			
 			} else {
-
+			
 				var warning_txt = document.getElementById('warning_txt');
 				warning_txt.innerHTML = 'Please adjust all slidebars to evaluate.';
-
+			
 			}
-
 		});
 	}
 
@@ -289,8 +287,11 @@ var Questionnaire = function() {
 
 		var age_input = document.getElementById("age_input").value;
 
+		var worker_id = document.getElementById('worker_id').value;
+
 		psiTurk.recordTrialData({'phase':'postquestionnaire',
 														'status':'submit',
+														'worker_id':worker_id,
 														'gender': gender,
 														'gender_describe': gender_describe,
 														'age': age_input,
@@ -333,7 +334,6 @@ var Questionnaire = function() {
 	psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
 
 	$("#next").click(function () {
-
 			var gender_rds, gender_selected;
 			gender_rds = document.querySelectorAll('input[name="answers[1]"]');
 			for (const rb of gender_rds) {
@@ -351,6 +351,13 @@ var Questionnaire = function() {
 				warning_txt.innerHTML = "Please select gender to continue.";
 				return;
 			}
+			
+			var worker_id = document.getElementById('worker_id').value;
+			console.log("worker id:" + worker_id);
+			if (worker_id === "") {
+				warning_txt.innerHTML = "Please write down your worker ID.";
+				return;
+			}
 
 			var age_input;
 			age_input = document.getElementById("age_input").valueAsNumber;
@@ -362,6 +369,7 @@ var Questionnaire = function() {
 					warning_txt.innerHTML = "The input age is not within a valid range.";
 					return;
 			}
+
 
 	    record_responses();
 	    psiTurk.saveData({

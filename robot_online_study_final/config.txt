@@ -20,20 +20,22 @@ database_url = sqlite:///ptdatabase.db
 table_name = pilotTestTable
 
 [Server Parameters]
-host = 0.0.0.0
+#host = 0.0.0.0
+host = localhost
 port = 22362
 cutoff_time = 30
 logfile = server.log
 loglevel = 2
-debug = false
+#debug = false
+debug = true
 login_username = KuriExp
 login_pw = Kuri2
 threads = auto
 secret_key = 'cknkuryfERTdsd38sdfo887nbg'
 #certfile = <path_to.crt>
 #keyfile = <path_to.key>
-adserver_revproxy_host = dashboard.personalrobotics.ri.cmu.edu
-adserver_revproxy_port = 80
+#adserver_revproxy_host = dashboard.personalrobotics.ri.cmu.edu
+#adserver_revproxy_port = 80
 server_timeout = 30
 
 [Task Parameters]
@@ -50,6 +52,6 @@ persistent_history_file = .psiturk_history
 #
 #   https://<host>:<port>/ad
 
-use_psiturk_ad_server = true
-ad_location = false
+#use_psiturk_ad_server = true
+#ad_location = false
 
