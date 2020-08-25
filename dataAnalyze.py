@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 import ast
+import statistics
 
 
 def transform_data():
@@ -92,7 +93,7 @@ def calculator():
 #get the average
 metrics = ['positivity', 'socialness', 'intensity']
 df2 = pd.read_csv('animations.csv')
-df2 = df.drop(['Index'], axis=1)
+df2 = df2.drop(['Index'], axis=1)
 metric = []
 
 def calculate_avg():
@@ -113,4 +114,78 @@ def calculate_avg():
     metric_list= pd.DataFrame(metric, columns=metrics, index=anim_name)
     metric_list.to_csv('animations_avg.csv')
 
-calculate_avg()
+
+#seperate metrics to make the analysis easier
+
+#haven't used this so far
+anim_name_new = ['green_blink_p.mp4', 'green_blink_s.mp4','green_blink_i.mp4',
+                 'blue_blink_p.mp4', 'blue_blink_s.mp4', 'blue_blink_i.mp4', 
+                 'white_blink_p.mp4', 'white_blink_s.mp4', 'white_blink_i.mp4',
+                 'yellow_blink_p.mp4', 'yellow_blink_s.mp4', 'yellow_blink_i.mp4', 
+                 'red_blink_p.mp4', 'red_blink_s.mp4', 'red_blink_i.mp4', 
+                 'head_up_yellow_p.mp4', 'head_up_yellow_s.mp4', 'head_up_yellow_i.mp4', 
+                 'head_up_red_p.mp4', 'head_up_red_s.mp4', 'head_up_red_i.mp4', 
+                 'head_up_green_p.mp4', 'head_up_green_s.mp4', 'head_up_green_i.mp4', 
+                 'head_up_blue_p.mp4', 'head_up_blue_s.mp4', 'head_up_blue_i.mp4', 
+                 'head_up_white_p.mp4', 'head_up_white_s.mp4', 'head_up_white_i.mp4', 
+                 'neutral_eyes_open_p.mp4', 'neutral_eyes_open_s.mp4', 'neutral_eyes_open_i.mp4', 
+                 'neutral_eyes_close_P.mp4', 'neutral_eyes_close_s.mp4', 'neutral_eyes_close_i.mp4', 
+                 'double_blink_p.mp4', 'double_blink_s.mp4', 'double_blink_i.mp4', 
+                 'putdown_sounds_on_p.mp4', 'putdown_sounds_on_s.mp4', 'putdown_sounds_on_i.mp4', 
+                 'pickup_sounds_on_p.mp4', 'pickup_sounds_on_s.mp4', 'pickup_sounds_on_i.mp4', 
+                 'gotit_docked_sounds_on_p.mp4', 'gotit_docked_sounds_on_s.mp4', 'gotit_docked_sounds_on_i.mp4', 
+                 'proud_1_sounds_on_p.mp4','proud_1_sounds_on_s.mp4','proud_1_sounds_on_i.mp4', 
+                 'tickle_sounds_on_p.mp4', 'tickle_sounds_on_s.mp4', 'tickle_sounds_on_i.mp4', 
+                 'giggle_3_sounds_on_p.mp4', 'giggle_3_sounds_on_s.mp4', 'giggle_3_sounds_on_i.mp4', 
+                 'no_2_sounds_on_p.mp4', 'no_2_sounds_on_s.mp4', 'no_2_sounds_on_i.mp4', 
+                 'live_frown_p.mp4', 'live_frown_s.mp4', 'live_frown_i.mp4', 
+                 'thank_you_1_sounds_on_p.mp4', 'thank_you_1_sounds_on_s.mp4', 'thank_you_1_sounds_on_i.mp4', 
+                 'yes_sounds_on_p.mp4', 'yes_sounds_on_s.mp4', 'yes_sounds_on_i.mp4', 
+                 'twitch_1_sounds_on_p.mp4', 'twitch_1_sounds_on_s.mp4', 'twitch_1_sounds_on_i.mp4', 
+                 'huh2_sounds_on_p.mp4', 'huh2_sounds_on_s.mp4', 'huh2_sounds_on_i.mp4', 
+                 'bye_1_sounds_on_p.mp4', 'bye_1_sounds_on_s.mp4', 'bye_1_sounds_on_i.mp4', 
+                 'photo_shoot_1_docked_p.mp4', 'photo_shoot_1_docked_s.mp4', 'photo_shoot_1_docked_i.mp4', 
+                 'huh1_offline_docked_sounds_on_p.mp4', 'huh1_offline_docked_sounds_on_s.mp4', 'huh1_offline_docked_sounds_on_i.mp4', 
+                 'ponder_sad_p.mp4', 'ponder_sad_s.mp4', 'ponder_sad_i.mp4', 
+                 'lost_sounds_on_p.mp4', 'lost_sounds_on_s.mp4', 'lost_sounds_on_i.mp4', 
+                 'pay_attention_0times_a.mp4', 'pay_attention_0times_s.mp4', 'pay_attention_0times_i.mp4', 
+                 'pay_attention_2times_a.mp4', 'pay_attention_2times_s.mp4', 'pay_attention_2times_i.mp4', 
+                 'pay_attention_4times_a.mp4', 'pay_attention_4times_s.mp4', 'pay_attention_4times_i.mp4']
+
+def seperate_metrics():
+    for c in df2: 
+        positivity = []
+        socialness = []
+        intensity = []
+        for r in df2[c]: 
+            m = ast.literal_eval(r)
+            positivity.append(float(m[0]))
+            socialness.append(float(m[1]))
+            intensity.append(float(m[2]))
+        metric.append([positivity,socialness,intensity])
+    metric_list= pd.DataFrame(metric, columns=anim_name_new, index=anim_name)
+    metric_list.to_csv('animations_seperate.csv')
+
+#get standard deviation
+f4 = pd.read_csv('animations_seperate.csv')
+sd = []
+    for index, row in f4.iterrows():
+        sdp = statistics.stdev(ast.literal_eval(row['positivity']))
+        sds = statistics.stdev(ast.literal_eval(row['socialness']))
+        sdi = statistics.stdev(ast.literal_eval(row['intensity']))
+        sd.append([sdp,sds,sdi])
+    sdlist= pd.DataFrame(sd, columns=metrics, index=anim_name)
+    sdlist.to_csv('animations_std.csv')
+
+#get median
+mid = []
+def median_calculate():
+    for index, row in f4.iterrows():
+        mp = statistics.median(ast.literal_eval(row['positivity']))
+        ms = statistics.median(ast.literal_eval(row['socialness']))
+        mi = statistics.median(ast.literal_eval(row['intensity']))
+        mid.append([mp,ms,mi])
+    median_list= pd.DataFrame(mid, columns=metrics, index=anim_name)
+    median_list.to_csv('animations_median.csv')
+
+median_calculate()
